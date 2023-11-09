@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+version.txt
+src/MeetingLanguage/__init__.py
+src/MeetingLanguage/cities.json
+src/MeetingLanguage/states_info.py
+src/meeting_transcript_analysis.egg-info/PKG-INFO
+src/meeting_transcript_analysis.egg-info/SOURCES.txt
+src/meeting_transcript_analysis.egg-info/dependency_links.txt
+src/meeting_transcript_analysis.egg-info/requires.txt
+src/meeting_transcript_analysis.egg-info/top_level.txt
