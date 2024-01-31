@@ -1,6 +1,8 @@
 import json
 import numpy as np
-import openai
+from openai import OpenAI
+
+client = OpenAI()
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer 
 
 # uncomment this and include your openai account api key 
@@ -84,7 +86,7 @@ class ConversationAnalyzer:
         full_conversation = self.stitch_convo()
         prompt = f"Based on the preceding conversation, does {speaker} have effective communication as a soft skill? Additionally, what types of soft skills does {speaker} possess?"
         model_input = [{"role": "user", "content": full_conversation}]
-        feedback = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=model_input)
+        feedback = client.chat.completions.create(model="gpt-3.5-turbo", messages=model_input)
 
         return {"sentiment_score": sentiment_score,
                 "words_per_minute": words_per_minute,

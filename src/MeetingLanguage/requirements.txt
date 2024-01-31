@@ -1,0 +1,4 @@
+openai==1.10.0
+streamlit==1.30.0
+plotly==5.18.0
+vaderSentiment==3.3.2
