@@ -62,6 +62,7 @@ class ConversationAnalyzer:
             speaker_times[sent["speaker"]] += tot_time
         return speaker_times
 
+    # getting kpis related to the speaker
     def get_speaker_kpi(self, speaker):
         # 1. sentiment analysis
         sentences = []
