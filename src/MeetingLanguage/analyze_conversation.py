@@ -53,7 +53,8 @@ class ConversationAnalyzer:
             stop = float(self.convo[i-1]["words"][-1]["end_timestamp"])
             pauses.append(start - stop)
         return sum(pauses) / len(pauses)
-        
+    
+    #Get speaker times (amount of time a speaker was actually speaking)
     def get_speaker_dist(self):
         speaker_times = {s: 0 for s in self.speakers}
         for sent in self.convo:
